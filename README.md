@@ -1,1 +1,1 @@
-This if my HTML/CSS name card for Bits of Good :).
+This if my name card for Bits of Good :).
