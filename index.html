@@ -1,18 +1,4 @@
-<!-- Context
-For this assessment you will introduce yourself to the Bits of Good team by creating a small info page! This page can be formatted and styled however you wish, but it should take the form of a "card". This take home assessment will be a way for us to gauge your knowledge of HTML and CSS.
 
-Basic Requirements
-In your card, include the following information:
-
-Name
-Major
-Year
-Something you are passionate about related to social good
-Where you're from (optional)
-
-Above and Beyond (Optional)
-Include animations using CSS or Javascript
-Make your card interactive with buttons, text inputs, etc.-->
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -22,9 +8,9 @@ Make your card interactive with buttons, text inputs, etc.-->
     <title>About Me: Bits of Good</title>
     <style>
         .card{
-            width: 25%;
+            width: 30%;
             margin: auto;
-            box-shadow: 0 6px 10px rgba(0, 0, 0, 0.2)
+            box-shadow: 0 6px 10px rgba(255, 179, 179, 0.2)
         }   
         img{
             width: 100%
@@ -48,6 +34,16 @@ Make your card interactive with buttons, text inputs, etc.-->
         }
     </style>
 </head>
+<script>
+function toggleProfile() {
+    const info = document.getElementById("moreInfo");
+    if (info.style.display === "none") {
+        info.style.display = "block";
+    } else {
+        info.style.display = "none";
+    }
+}
+</script>
 <body>
     <div class="card">
         <img src = ./myAvatar.jpg alt = "">
@@ -57,8 +53,16 @@ Make your card interactive with buttons, text inputs, etc.-->
             <p>Year: Freshman</p>
             <p>Social Good Passions: Drug Abuse Prevention, Technological Literacy</p>
             <p>Where I am From: Covington, GA</p>
-            <button>View Profile</button>
-        </div>
+            <button onclick="toggleProfile()">More Info</button>
+
+            <div id="moreInfo" style="display:none; margin-top:10px;">
+                <p>Clubs: Rock Climbing, SEED</p>
+                <p>Skills: Python, Java, Public Speaking</p>
+                <p>Interests: Social Impact using Technology, AI, Robotics, Gym</p>
+            </div>
+            <a href="FranciscoAlvaradoResume.pdf" target="_blank">
+    <button>View Résumé</button>
+</a>
     </div>
 </body>
 </html>
