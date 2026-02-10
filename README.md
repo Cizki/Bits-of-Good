@@ -1,1 +1,1 @@
-This if my name card for Bits of Good :).
+This is my name card for Bits of Good :).
